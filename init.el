@@ -1,4 +1,4 @@
-(require 'package)
+]1;5202;0c(require 'package)
 
 ;; Adds the Melpa archive to the list of available repositories
 (add-to-list 'package-archives
@@ -17,7 +17,8 @@
     flycheck
     py-autopep8 
     material-theme                  ;; Theme
-    pyenv-mode
+    anaconda-mode
+    ;;pyenv-mode
     )
   )
 
@@ -38,7 +39,8 @@
 
 ;; User-Defined init.el ends here
 (elpy-enable)
-(pyenv-mode)
+;;(pyenv-mode)
+(add-hook 'python-mode-hook 'anaconda-mode)
 (setq python-shell-interpreter "ipython"
       python-shell-interpreter-args "-i --simple-prompt")
 
